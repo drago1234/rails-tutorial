@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'rails/generate'
-  get 'rails/controller'
-  get 'rails/StaticPages'
-  get 'rails/home'
-  get 'rails/help'
+  get 'static_pages/home'
+  get 'static_pages/help'
   root 'application#hello'
 end
