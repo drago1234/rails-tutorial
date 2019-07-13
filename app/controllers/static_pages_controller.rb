@@ -1,3 +1,4 @@
+# All the actions goes heres
 class StaticPagesController < ApplicationController
   def home
   end
