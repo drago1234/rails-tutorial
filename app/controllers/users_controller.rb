@@ -22,6 +22,7 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
   
   #Indented private method is from Author's suggestion as best practise!
   private
