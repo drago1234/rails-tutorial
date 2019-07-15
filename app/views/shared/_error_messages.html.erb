@@ -1,0 +1,15 @@
+<% if @user.errors.any? %> 
+  <div id="error_explanation">
+    <!--Those are bootstrap classes, so don't change them-->
+    <div class="alert alert-danger"> 
+      <!--pluralize will pluralize "error" ==> "errors"-->
+      The form contains <%= pluralize(@user.errors.count, "error") %>.
+    </div>
+    <ul>
+      <!--Print all the errory messages -->
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

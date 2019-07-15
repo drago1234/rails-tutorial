@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <title><%= yield(:title) %> | Freelance Canvas</title>
   </head>
     <%=render 'layouts/head' %>
   </head>
@@ -9,8 +9,16 @@
   <!-- It's yielding a block -->
     <%= render 'layouts/header' %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %>
+        <!--Add a div tag so we could style it-->
+        </div>
+      <% end %>
       <%= yield %>
       <%=render 'layouts/footer' %>
+      <!--For debugging. It creates a debugging window-->
+      <%= debug(params) if Rails.env.development? %> 
+      
     </div>
   </body>
 </html>
