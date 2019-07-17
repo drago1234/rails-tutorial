@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)   # Not the final implementation!
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Freelance Canvas" #treat it like a hash see: 7.4.2
       redirect_to user_url(@user) #Go to corresponding user profile page after account created
       # Handle a successful save.

@@ -1,3 +1,4 @@
+#module can be included into classes
 module UsersHelper
   
   # Returns the Gravatar for the given user.
