@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     # find the user based on the email address
     if user && user.authenticate(params[:session][:password])
       log_in user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to user
       # Log the user in and redirect to the user's show page.
       # the if statement is true only if a user with the given email both exists in the database and has the given password, check this with debugger and type !!(user && user.authenticate('foobar'))
@@ -26,7 +27,7 @@ class SessionsController < ApplicationController
   
   #call log_out method( in sessions_helper.rb) and redirect to index.html
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
   
