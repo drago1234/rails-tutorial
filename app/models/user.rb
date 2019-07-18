@@ -13,7 +13,7 @@ class User < ApplicationRecord
   #has_secure_password: 1)This will automatically save a securely hashed password_digest attribute to the database. 
   #2)It create a pair of attribute for (password and password_confirmation) 
   #3)Also for authenticate method, i.e >>user = User.first --> user.authenticate("password")
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   
   # Returns the hash digest of the given string.
   def User.digest(string)
