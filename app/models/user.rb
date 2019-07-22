@@ -14,6 +14,7 @@ class User < ApplicationRecord
   #2)It create a pair of attribute for (password and password_confirmation) 
   #3)Also for authenticate method, i.e >>user = User.first --> user.authenticate("password")
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  # With allow_nil, user don't have to reenter password for updating profile info
   
   # Returns the hash digest of the given string.
   def User.digest(string)

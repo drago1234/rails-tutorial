@@ -7,12 +7,12 @@ gem 'rails', '~> 5.2.3'
 #From tutorail, https://github.com/mhartl/rails_tutorial_4th_edition_gemfiles/blob/master/sample_app/Gemfile
 gem 'bcrypt',                  '3.1.12'
 gem 'faker',                   '1.7.3'
+gem 'will_paginate',           '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
-gem 'will_paginate',           '3.1.6'
 gem "paperclip", "~> 6.0.0"
 gem 'devise'
-gem 'rails', '~> 5.2.3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -24,7 +24,6 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'bootstrap-will_paginate', '1.0.0'
 gem "bootstrap-sass", ">= 3.4.1" 
 
 group :development, :test do
